@@ -50,6 +50,53 @@ This guide walks you through setting up a **Virtual Private Cloud (VPC)** with s
    - Create a new route table `PrivateRouteTable`.
    - Associate `PrivateSubnet` with this route table (no internet access yet).
 
+### Steps to Use the JSON Policy for NAT Gateway Permissions
+- Create an IAM Policy
+- Go to AWS Console → IAM → Policies
+
+- Click Create Policy
+
+- Select the JSON tab and paste the following policy:
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeNatGateways",
+        "ec2:CreateNatGateway",
+        "ec2:DeleteNatGateway",
+        "ec2:AssociateNatGatewayAddress",
+        "ec2:DescribeAddresses",
+        "ec2:AllocateAddress",
+        "ec2:ReleaseAddress"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+- Click Next: Tags, then Next: Review
+
+- Name it: NATGateway-Policy and click Create Policy
+
+- Attach Policy to an IAM Role or User
+- Now, attach this policy to an IAM user or role that needs NAT Gateway management access.
+
+- Go to IAM → Users or Roles
+
+- Select the user or role that will manage NAT Gateways
+
+- Click Attach policies
+
+- Search for NATGateway-Policy and select it
+
+- Click Attach Policy
+
+### NB: THIS STEP IS ONLY NECESSARY IF CREATING THE NAT GATEWAY THROUGH AWS CLI.
+
 ### Create a NAT Gateway
 1. Go to **NAT Gateways** > **Create NAT Gateway**.
 2. Select `PublicSubnet`.
@@ -78,6 +125,7 @@ This guide walks you through setting up a **Virtual Private Cloud (VPC)** with s
 
 
 SCREENSHOTS
+
 ![VPC](https://github.com/Nifesimi-p/aws-networking/blob/main/VPC.png)
 ![SUBNETS](https://github.com/Nifesimi-p/aws-networking/blob/main/SUBNETS.png)
 ![NACL](https://github.com/Nifesimi-p/aws-networking/blob/main/NACL.png)
@@ -85,7 +133,7 @@ SCREENSHOTS
 ![SG](https://github.com/Nifesimi-p/aws-networking/blob/main/SG.png)
 ![IGW](https://github.com/Nifesimi-p/aws-networking/blob/main/IGW.png)
 ![RT](https://github.com/Nifesimi-p/aws-networking/blob/main/RT.png)
-
+![NAT](https://github.com/Nifesimi-p/aws-networking/blob/main/NAT.png)
 
 
 
