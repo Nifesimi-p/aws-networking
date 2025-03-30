@@ -77,6 +77,17 @@ This guide walks you through setting up a **Virtual Private Cloud (VPC)** with s
    - Allow outbound: All traffic to `PublicSubnet`.
 
 
+SCREENSHOTS
+![VPC](https://github.com/Nifesimi-p/cloud-services-models/blob/main/IMAGE1.png#:~:text=t-,IMAGE1,-.png)
+![SUBNETS](https://github.com/Nifesimi-p/cloud-services-models/blob/main/IMAGE1.png#:~:text=IMAGE1.png-,IMAGE2,-.png)
+![NACL](https://github.com/Nifesimi-p/cloud-services-models/blob/main/IMAGE1.png#:~:text=IMAGE3-,.,-png)
+![NACL2](https://github.com/Nifesimi-p/cloud-services-models/blob/main/IMAGE1.png#:~:text=t-,IMAGE1,-.png)
+![SG](https://github.com/Nifesimi-p/cloud-services-models/blob/main/IMAGE1.png#:~:text=IMAGE1.png-,IMAGE2,-.png)
+![IGW](https://github.com/Nifesimi-p/cloud-services-models/blob/main/IMAGE1.png#:~:text=IMAGE3-,.,-png)
+![RT](https://github.com/Nifesimi-p/cloud-services-models/blob/main/IMAGE1.png#:~:text=t-,IMAGE1,-.png)
+![NAT](https://github.com/Nifesimi-p/cloud-services-models/blob/main/IMAGE1.png#:~:text=IMAGE1.png-,IMAGE2,-.png)
+
+
 
 
 
